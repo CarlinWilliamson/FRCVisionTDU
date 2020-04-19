@@ -1,0 +1,44 @@
+<html>
+ <head>
+  <title>Live image</title>
+ </head>
+ <body onload="pageLoaded()">
+  <div id="div1" style="display: block">
+   <img id="img1" src="live.png"/>
+  </div>
+  <div id="div2" style="display: none">
+   <img id="img2" src="live.png"/>
+  </div>
+
+  <script>
+   function pageLoaded() {
+     var img = document.getElementById('img1')
+     img.addEventListener('load', img1Loaded)
+     img.addEventListener('error', img1Loaded)
+     img = document.getElementById('img2')
+     img.addEventListener('load', img2Loaded)
+     img.addEventListener('error', img2Loaded)
+
+     img1Loaded()
+   }
+
+   function img1Loaded() {
+     document.getElementById("div1").style.display = "block"
+     document.getElementById("div2").style.display = "none"
+     // Reload img2.
+     setTimeout(function() {
+       document.getElementById("img2").src = "live.png?2-" + new Date().getTime();
+     }, 100);
+   }
+
+   function img2Loaded() {
+     document.getElementById("div2").style.display = "block"
+     document.getElementById("div1").style.display = "none"
+     // Reload img1.
+     setTimeout(function() {
+     document.getElementById("img1").src = "live.png?1-" + new Date().getTime();
+     }, 100);
+   }
+  </script>
+ </body>
+</html>

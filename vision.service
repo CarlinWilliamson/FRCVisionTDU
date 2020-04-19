@@ -1,0 +1,11 @@
+[Unit]
+Description=TDU Vision Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/bin/sh -c '/bin/bash /var/www/html/vision/systemd_start.sh >> /var/www/html/vision/systemd.log 2>&1' 
+
+[Install]
+WantedBy=multi-user.target
+
