@@ -17,3 +17,6 @@ Runs at approximately 20fps on a raspberry pi 3
 ## Running this code
 detect_goals.py is the main entry point
 There are also systemd files wihch can be used to run this as a service on external hardware
+
+## Where's the git history
+Unfortunately I was using subversion while writing this the respository for which I do not have access to anymore.
