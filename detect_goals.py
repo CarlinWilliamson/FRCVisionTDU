@@ -32,7 +32,7 @@ class Parser:
         print options
         return use_screen, con_to_robot, use_local_file, write_file, use_debug, verbose, use_single_camera
 
-IMAGE_NAME = "boiler.png"
+IMAGE_NAME = "2016.png"
 IMAGE_NAME_2 = "lift_peg.png"
 ERROR_IMAGE_NAME = "error_image.png"
 SAVE_DIR = "output"
