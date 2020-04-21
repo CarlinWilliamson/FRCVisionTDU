@@ -41,13 +41,13 @@ IMAGE_SERVER_PORT = 5802
 
 
 GOAL_AREA_THRESHOLD = 200
-GOAL_FULLNESS_THRESHOLD_LOWER = .6
-GOAL_FULLNESS_THRESHOLD_UPPER = 3
+GOAL_FULLNESS_THRESHOLD_LOWER = .1
+GOAL_FULLNESS_THRESHOLD_UPPER = 1
 GOAL_ASPECT_THRESHOLD_LOWER = 2
 GOAL_ASPECT_THRESHOLD_UPPER = 14
 GOAL_TARGET_ASPECT_THRESHOLD_LOWER = 1
 GOAL_TARGET_ASPECT_THRESHOLD_UPPER = 3
-GOAL_TARGET_DISTANCE_FACTOR = 0
+GOAL_TARGET_DISTANCE_FACTOR = 20000
    
 GOAL_SELECTION_VALUES = [GOAL_AREA_THRESHOLD,\
                         GOAL_FULLNESS_THRESHOLD_LOWER,\
@@ -140,7 +140,7 @@ def main():
                 image, capture_timestamp = camera_1.get_image(capture_timestamp)
                 image_mask = mask_image(image, mask_values)
                 data, image = goal.find_goal(image, image_mask, goal_history,\
-                    capture_timestamp, use_screen, draw_extra, verbose, True, GOAL_SELECTION_VALUES)
+                    capture_timestamp, use_screen, draw_extra, verbose, False, GOAL_SELECTION_VALUES)
             
             elif connection.wantedCameraID() == "g" and not camera_2.is_broken():
                 print "searching for a gear lift"

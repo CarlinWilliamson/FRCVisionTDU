@@ -390,7 +390,8 @@ def cal_distance_position(image_size, goal_center):
     horizontal_distance += CORRECTION_INTERCEPT
 
     # Use pythagorus's theorm to find the distance between the camera and the goal
-    # distance = cal_point_distance((horizontal_distance, GOAL_HEIGHT_RELATIVE),(0,0))
+    distance = cal_point_distance((horizontal_distance, GOAL_HEIGHT_RELATIVE),(0,0))
+    print(horizontal_distance, distance);
     return distance
 
 # calculates the angle between the camera and the target

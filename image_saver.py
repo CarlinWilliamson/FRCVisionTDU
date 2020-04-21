@@ -50,8 +50,9 @@ class ImageSaver(threading.Thread):
         self.capture_timestamp = 0
         self.written_timestamp = 0
         self.file_number = 0
-        self.rename_directories()
-        if present: self.start()
+        if present:
+            self.rename_directories()
+            self.start()
 
     # called by the main processing thread to give it images
     def give_image(self, image, capture_timestamp):
