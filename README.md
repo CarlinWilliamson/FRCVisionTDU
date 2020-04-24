@@ -1,5 +1,5 @@
 # FRCVisionTDU
-Framework for using a camera to detect vision targets
+Framework for using a camera to detect vision targets.
 
 ## What is this?
 FIRST Robotics Competition is an anual robotics competition where high school students with help from industry mentors design, build and program 2 m^3, 55 kg robots.
@@ -21,14 +21,14 @@ We then create contours (lists of points defining the white regions) and ignore 
 With this information we can aim and shoot at the goal.
 
 ## Features
-Seperate threads for capturing images, saving images for debugging, serving images over the web, communication with other devices and the main processing of images/localiation
-Selects goals based upon their area, squareness and aspect ratio
-Ability to run and switch between multiple cameras with different goal selection parameters
-Runs at approximately 20fps on a raspberry pi 3
+Seperate threads for capturing images, saving images for debugging, serving images over the web, communication with other devices and the main processing of images/localiation.
+Selects goals based upon their area, squareness and aspect ratio.
+Ability to run and switch between multiple cameras with different goal selection parameters.
+Runs at approximately 20fps on a raspberry pi 3.
 
 ## Running this code
-detect_goals.py is the main entry point
-There are also systemd files wihch can be used to run this as a service on external hardware
+detect_goals.py is the main entry point.
+There are also systemd files wihch can be used to run this as a service on external hardware.
 
 ## Where's the git history
 Unfortunately I was using subversion while writing this the respository for which I do not have access to anymore.
